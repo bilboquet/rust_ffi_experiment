@@ -26,3 +26,18 @@ rust_lib.add.argtypes = [ctypes.c_int, ctypes.c_int]
 result = rust_lib.add(35, 34)  # 69
 
 print(f"Result from external addition of 35 and 34: {result}")
+
+
+
+# play with strings
+rust_lib.concatenate_strings.restype = ctypes.c_char_p
+
+# call and concat
+s1 = b"Hello, "
+s2 = b"world!"
+result = rust_lib.concatenate_strings(s1, s2)
+
+print(result.decode('utf-8'))
+
+# free memory
+rust_lib.free_concatenated_string(result)
