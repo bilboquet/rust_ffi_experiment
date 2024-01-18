@@ -4,7 +4,7 @@ pushd .
 cd ../rust_ffi && cargo build --release && popd
 
 # run our ts test
-deno run --allow-ffi --unstable typescript/main.ts > result.txt
+deno run --allow-ffi --unstable deno/main.ts > result.txt
 
 # diff the result
 diff result.txt expected.txt

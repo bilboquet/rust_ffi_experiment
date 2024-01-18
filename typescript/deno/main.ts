@@ -24,7 +24,11 @@ const dylib = Deno.dlopen(
   } as const,
 );
 
+// import from the implementation in TS that has to be tested
+import {operand_35, operand_34} from "../node/src/index.ts";
+
+
 // Call the symbol `add`
-const result = dylib.symbols.add(35, 34); // 69
+const result = dylib.symbols.add(operand_35(), operand_34()); // 69
 
 console.log(`Result from external addition of 35 and 34: ${result}`);
