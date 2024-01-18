@@ -6,6 +6,10 @@ export function operand_34(): number {
   return 34;
 }
 
-export function sayHelloWorld(world: string) {
-  return `Hello ${world}`;
+export function get_hello(): string {
+  return "Hello ";
+}
+
+export function get_world(): string {
+  return "World!";
 }
