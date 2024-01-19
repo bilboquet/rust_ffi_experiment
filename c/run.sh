@@ -7,7 +7,8 @@ cd ../rust_ffi && cargo build && popd
 make main
 
 # run our ts test
-./main > result.txt
+# need to have librust_ffi.so in LD_LIBRARY_PATH, set it temporarily here
+LD_LIBRARY_PATH="../rust_ffi/target/debug/" ./main > result.txt
 
 # diff the result
 diff result.txt expected.txt

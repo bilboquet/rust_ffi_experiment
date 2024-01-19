@@ -15,7 +15,7 @@ all: $(TARGET)
 
 # Règle pour l'exécutable
 $(TARGET): src/*.c
-	$(CC) $(CFLAGS) -o $(TARGET) src/*.c $(LIBS)
+	$(CC) $(CFLAGS) -o $(TARGET) src/*.c $(LIBS) -L ../rust_ffi/target/debug/ -lrust_ffi
 
 # Règle pour nettoyer les fichiers générés
 clean:
