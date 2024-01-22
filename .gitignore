@@ -12,3 +12,17 @@ Cargo.lock
 
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
+
+result.txt
+
+typescript/node/node_modules
+typescript/node/lib
+typescript/node/src/index.js
+
+zig/src/zig-cache
+zig/zig-cache
+zig/zig-out
+
+python/__pycache__
+
+rust_ffi/bindings.h
