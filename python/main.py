@@ -39,5 +39,5 @@ result = rust_lib.concatenate_strings(s1, s2)
 
 print(result.decode('utf-8'))
 
-# free memory
-rust_lib.free_concatenated_string(result)
+# free memory make the program crash, we suspect a conflict with python garbage collector
+# rust_lib.free_concatenated_string(result)
